@@ -1,6 +1,5 @@
 package br.com.jailson.Gft;
 
-import static org.junit.Assert.*;
 import org.junit.Test;
 
 import junit.framework.TestCase;
@@ -79,5 +78,14 @@ public class CalculaSaidaTest extends TestCase {
 		assertEquals(true, calc.getSaida().equals(saida));
 	}
 	
+	@Test
+	public void testeNoiteNaoPodeRepetir() {
+		CalculaSaida calc = new CalculaSaida(); 
+		String args[] = {"noite, 1, 2, 3, 3"};
+		calc.setArgs(args);
+		String saida = "Saída: carne, batata, erro";
+		
+		assertEquals(true, calc.getSaida().equals(saida));
+	}
 	
 }
